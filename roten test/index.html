@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>Routine Test Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome 6 CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+  
+  
+  <div class="controls">
+<div class="d-flex">
+
+<!-- ########## السنترال ########## -->
+<form id="formCenteral">
+  <label>السنترال</label>
+  <input type="text" id="centeral" placeholder="ادخل اسم السنترال">
+  <button type="submit">حفظ</button>
+</form>
+
+
+<!-- ########## الكابينة ########## -->
+<form id="formKabinate">
+  <label>الكابينة</label>
+  <input type="text" id="kabinate" placeholder="ادخل اسم الكابينة">
+  <button type="submit">حفظ</button>
+</form>
+<!-- ########## التاريخ ########## -->
+<form id="formDate">
+  <label>التاريخ</label>
+  <input type="text" id="date" placeholder="ادخل التاريخ">
+  <button type="submit">حفظ</button>
+</form>
+
+<!-- ########## رقم الخط ########## -->
+<form id="formLine">
+  <label>رقم الخط: </label>  <br>
+  <input type="number" id="lineInput" placeholder="أدخل رقم الخط">
+  <button type="submit">حفظ</button>
+  <button style="background-color: rgb(216, 17, 17);" type="button" onclick="undoRow()"> <i class="fa-solid fa-trash-can-arrow-up"></i> تراجع</button>
+
+</form>
+<button style="background-color: rgb(141, 212, 33);color:black" onclick="window.print()">🖨️ طباعة</button>
+
+
+</div>
+</div>
+
+<div class="imgs">
+    <img src="imgs/arbi.png" alt="" width="200px" height="100px">
+    <img src="imgs/we.webp"  width="100px">
+  </div>
+<div class="d-flex text">
+  <p id="divc">سنترال :</p>
+  <p id="divk"> كابينة رقم : </p>
+  <p id="divd">التاريخ</p>
+
+</div>
+  <div class="tables-container">
+    <!-- جدول 1 -->
+    <table id="routineTable1">
+      <thead>
+        <tr>
+          <th rowspan="2" >خط رقم</th>
+          <th colspan="2">قياس العزل ( بعد )</th>
+          <th colspan="2">استمرارية</th>
+        </tr>
+        
+        <th>A</th>
+        <th>B</th>
+        <th>A</th>  
+        <th>B</th>
+        <tr>
+
+        </tr>
+      </thead>
+      <tbody>
+        <!-- توليد 40 صف فاضي -->
+        <script>
+          for (let i = 0; i < 40; i++) {
+            document.write(`<tr><td></td><td></td><td></td><td></td><td></td></tr>`);
+          }
+        </script>
+      </tbody>
+    </table>
+
+    <!-- جدول 2 -->
+    <table id="routineTable2">
+      <thead>
+        <tr>
+          <th rowspan="2" >خط رقم</th>
+          <th colspan="2">قياس العزل ( بعد )</th>
+          <th colspan="2">استمرارية</th>
+        </tr>
+        
+        <th>A</th>
+        <th>B</th>
+        <th>A</th>
+        <th>B</th>
+        <tr>
+
+        </tr>
+      </thead>      
+      <tbody>
+        <!-- توليد 40 صف فاضي -->
+        <script>
+          for (let i = 0; i < 40; i++) {
+            document.write("<tr><td></td><td></td><td></td><td></td><td></td></tr>");
+          }
+        </script>
+      </tbody>
+    </table>
+    <div class="flex">
+        <p>شركة العربي للاتصالات</p>
+        <p>الشركة المصرية للاتصالات</p>
+    </div>
+  </div>
+<script src="script.js"></script>
+</body>
+</html>
